@@ -5,10 +5,9 @@
     "node": ">=12.14.0"
   }, 
   "scripts": {
-    "preinstall": "export NODE_OPTIONS=--openssl-legacy-provider",
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json --open",
-    "build": "ng build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && npm install && ng build",
     "test": "ng test",
     "lint": "ng lint"
   },
